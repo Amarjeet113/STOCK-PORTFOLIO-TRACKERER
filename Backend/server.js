@@ -15,14 +15,16 @@ const app = express();
 
 // Middleware
 const allowedOrigins = [
-  'http://localhost:3000',  // Your local development frontend
-  'https://stock-portfolio-trackerer-fdh6.vercel.app/', // Your production frontend
+  'https://stock-portfolio-trackerer-fdh6.vercel.app', // Your frontend URL
+  'https://stock-portfolio-trackerer.vercel.app',  
+  'http://localhost:3000/'
+  //    // If your backend and frontend are on different subdomains or environments
 ];
 
 // CORS configuration
 const corsOptions = {
   origin: function (origin, callback) {
-    // Allow requests with no origin (like mobile apps, Postman, etc.)
+    // Check if the origin is in the allowedOrigins list
     if (!origin || allowedOrigins.indexOf(origin) !== -1) {
       callback(null, true);
     } else {
@@ -32,6 +34,7 @@ const corsOptions = {
   methods: ['GET', 'POST', 'PUT', 'DELETE'],
   allowedHeaders: ['Content-Type', 'Authorization'],
 };
+
 
 // Use CORS middleware
 app.use(cors(corsOptions));// Enable CORS
