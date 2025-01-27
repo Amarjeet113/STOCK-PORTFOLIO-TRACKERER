@@ -14,7 +14,27 @@ const stockRoutes = require('./routes/stockRoutes');
 const app = express();
 
 // Middleware
-app.use(cors()); // Enable CORS
+const allowedOrigins = [
+  'http://localhost:3000',  // Your local development frontend
+  'https://stock-portfolio-trackerer-fdh6.vercel.app/', // Your production frontend
+];
+
+// CORS configuration
+const corsOptions = {
+  origin: function (origin, callback) {
+    // Allow requests with no origin (like mobile apps, Postman, etc.)
+    if (!origin || allowedOrigins.indexOf(origin) !== -1) {
+      callback(null, true);
+    } else {
+      callback(new Error('Not allowed by CORS'));
+    }
+  },
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  allowedHeaders: ['Content-Type', 'Authorization'],
+};
+
+// Use CORS middleware
+app.use(cors(corsOptions));// Enable CORS
 app.use(express.json()); // Parse JSON request body
 
 // MongoDB Connection
