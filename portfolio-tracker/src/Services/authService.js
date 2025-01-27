@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 // Set your backend URL
-const API_URL = 'http://localhost:5000/api/auth'; // Replace with actual backend URL if deployed
+const API_URL = 'https://stock-portfolio-trackerer.vercel.app/api/auth'; // Replace with actual backend URL if deployed
 
 // Login function
 const login = async (credentials) => {

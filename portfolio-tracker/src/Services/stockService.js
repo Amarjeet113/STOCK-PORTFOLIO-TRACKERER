@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 // Set your backend URL
-const API_URL = 'http://localhost:5000/api/stocks'; // Replace with actual backend URL if deployed
+const API_URL = 'https://stock-portfolio-trackerer.vercel.app/api/stocks'; // Replace with actual backend URL if deployed
 
 // Fetch portfolio function
 const getPortfolio = async () => {
