@@ -1,0 +1,81 @@
+.home {
+  font-family: 'Arial', sans-serif;
+  text-align: center;
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  padding: 50px;
+  border-radius: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  max-width: 900px;
+  margin: 0 auto;
+  color: white;
+  transition: all 0.3s ease-in-out;
+}
+
+.home h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+.home p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+.home-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+button {
+  background-color: #ff7e5f;
+  color: white;
+  padding: 12px 24px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transform: translateY(0);
+}
+
+button:hover {
+  background-color: #feb47b;
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+button:active {
+  background-color: #ff6347;
+  transform: translateY(2px);
+}
+
+button:focus {
+  outline: none;
+}
+
+button:focus-visible {
+  box-shadow: 0 0 0 4px rgba(255, 127, 95, 0.5);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .home {
+    padding: 40px;
+  }
+
+  .home h1 {
+    font-size: 2.5rem;
+  }
+
+  .home p {
+    font-size: 1.1rem;
+  }
+
+  button {
+    font-size: 0.9rem;
+  }
+}

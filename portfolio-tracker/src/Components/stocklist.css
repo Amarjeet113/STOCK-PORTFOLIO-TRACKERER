@@ -1,0 +1,159 @@
+/* Stock List Container */
+.stock-list {
+  font-family: 'Arial', sans-serif;
+  background: #f5f7fa;
+  color: #333;
+  padding: 40px;
+  border-radius: 15px;
+  max-width: 800px;
+  margin: 30px auto;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+}
+
+.stock-list h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #2575fc;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.stock-list ul {
+  list-style: none;
+  padding: 0;
+}
+
+.stock-list li {
+  background: #ffffff;
+  padding: 15px;
+  margin: 10px 0;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+.stock-list li:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
+}
+
+.stock-list span {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+button {
+  background-color: #ff6347;
+  color: white;
+  padding: 8px 15px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transform: translateY(0);
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background-color: #e53e3e;
+  transform: translateY(-4px);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
+}
+
+button:active {
+  background-color: #c53030;
+  transform: translateY(2px);
+}
+
+button:focus {
+  outline: none;
+}
+
+.no-stocks {
+  font-size: 1.2rem;
+  color: #888;
+  text-align: center;
+}
+
+/* Loading Spinner (3D effect) */
+.loading-spinner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  perspective: 800px; /* Adds depth for 3D effect */
+  margin: 20px 0;
+}
+
+.loading-cube {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  transform-style: preserve-3d; /* Enable 3D transformations */
+  animation: spin 1.5s infinite linear; /* Add rotation animation */
+}
+
+.loading-cube div {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background: #007bff;
+  opacity: 0.8;
+  border-radius: 4px; /* Slightly rounded corners */
+  transform-origin: center;
+}
+
+/* Position each cube face */
+.loading-cube .front {
+  transform: rotateY(0deg) translateZ(20px);
+}
+.loading-cube .back {
+  transform: rotateY(180deg) translateZ(20px);
+}
+.loading-cube .left {
+  transform: rotateY(-90deg) translateZ(20px);
+}
+.loading-cube .right {
+  transform: rotateY(90deg) translateZ(20px);
+}
+.loading-cube .top {
+  transform: rotateX(90deg) translateZ(20px);
+}
+.loading-cube .bottom {
+  transform: rotateX(-90deg) translateZ(20px);
+}
+
+/* Spin animation */
+@keyframes spin {
+  0% {
+    transform: rotateX(0deg) rotateY(0deg);
+  }
+  100% {
+    transform: rotateX(360deg) rotateY(360deg);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .stock-list {
+    padding: 20px;
+    margin: 20px;
+  }
+
+  .stock-list h2 {
+    font-size: 1.8rem;
+  }
+
+  .stock-list li {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .stock-list span {
+    margin-bottom: 5px;
+  }
+}

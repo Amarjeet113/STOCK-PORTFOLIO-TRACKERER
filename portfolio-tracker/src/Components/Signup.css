@@ -1,0 +1,114 @@
+/* Base styles for the signup container */
+.signup {
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(135deg, #ff7e5f, #feb47b);
+  color: white;
+  padding: 50px;
+  border-radius: 20px;
+  max-width: 400px;
+  margin: 50px auto;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+  transform: perspective(800px);
+  transition: all 0.3s ease-in-out;
+}
+
+.signup h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  transform: translateZ(0);
+}
+
+.signup form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.signup div {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  font-size: 1rem;
+  margin-bottom: 5px;
+}
+
+input {
+  padding: 12px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 10px;
+  outline: none;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+  transform: translateZ(0);
+}
+
+input:focus {
+  box-shadow: 0 0 15px rgba(255, 127, 95, 0.7);
+  border: 1px solid #ff7e5f;
+  transform: translateZ(8px);
+}
+
+button {
+  background-color: #ff7e5f;
+  color: white;
+  font-size: 1.1rem;
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+  transform: translateY(0) translateZ(0);
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background-color: #feb47b;
+  transform: translateY(-6px) translateZ(6px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
+}
+
+button:active {
+  background-color: #ff6347;
+  transform: translateY(3px) translateZ(0);
+}
+
+button:focus {
+  outline: none;
+}
+
+.success {
+  color: #32cd32;
+  font-size: 1rem;
+  text-align: center;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+.error {
+  color: #ff6347;
+  font-size: 1rem;
+  text-align: center;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .signup {
+    padding: 30px;
+    margin: 20px;
+  }
+
+  .signup h2 {
+    font-size: 1.8rem;
+  }
+
+  input, button {
+    font-size: 1rem;
+  }
+}

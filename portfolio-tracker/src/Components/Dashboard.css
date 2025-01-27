@@ -1,0 +1,105 @@
+.dashboard {
+  font-family: 'Arial', sans-serif;
+  text-align: center;
+  background-color: #f8f9fa;
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2), 0 12px 24px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+  margin: 0 auto;
+  transition: all 0.3s ease-in-out;
+  transform: perspective(1000px);
+}
+
+.dashboard:hover {
+  transform: perspective(1000px) rotateY(5deg) rotateX(3deg);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25), 0 15px 40px rgba(0, 0, 0, 0.1);
+}
+
+.dashboard h1 {
+  color: #343a40;
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.dashboard p {
+  color: #6c757d;
+  font-size: 1.1rem;
+}
+
+button {
+  background-color: #007bff;
+  color: white;
+  padding: 12px 24px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+  transform: translateY(0) rotateX(0deg);
+}
+
+button:hover {
+  background-color: #0056b3;
+  transform: translateY(-3px) rotateX(5deg);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+button:active {
+  background-color: #003f7d;
+  transform: translateY(1px) rotateX(-5deg);
+}
+
+button:focus {
+  outline: none;
+}
+
+button:focus-visible {
+  box-shadow: 0 0 0 4px rgba(0, 123, 255, 0.5);
+}
+
+.dashboard .add-stock-btn {
+  margin-top: 20px;
+}
+
+.stock-list {
+  margin-top: 30px;
+}
+
+.stock-list li {
+  background: linear-gradient(135deg, #ff7e5f, #feb47b);
+  color: white;
+  margin: 10px 0;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  transform: perspective(1000px) rotateY(0deg) translateZ(0);
+}
+
+.stock-list li:hover {
+  transform: perspective(1000px) rotateY(15deg) translateZ(10px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+}
+
+.stock-list li:nth-child(odd) {
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+}
+
+@media (max-width: 768px) {
+  .dashboard {
+    padding: 30px;
+  }
+
+  .dashboard h1 {
+    font-size: 2rem;
+  }
+
+  button {
+    font-size: 0.9rem;
+  }
+}
